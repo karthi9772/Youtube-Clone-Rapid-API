@@ -34,8 +34,7 @@ const categories = [
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
-export const Sidebar = () => {
-  const [SelectedCategory, SetSelectedCategory] = useState("");
+export const Sidebar = ({ SelectedCategory, SetSelectedCategory }) => {
   return (
     <Stack
       direction="row"
