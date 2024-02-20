@@ -9,7 +9,7 @@ import {
 } from "./components";
 const App = () => (
   <Router>
-    <Box sx={{ backgroundColor: "#000" }}>
+    <Box sx={{ background: "#323e62" }}>
       <Navbar />
     </Box>
     <Routes>

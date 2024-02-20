@@ -4,8 +4,10 @@ import { Search } from "@mui/icons-material";
 export const SearchBar = () => {
   return (
     <Paper
+      component="form"
+      onSubmit={() => {}}
       sx={{
-        border: "1px solid #e3e3e3",
+        border: "1px solid #323e62",
         pl: 2,
         borderRadius: "20px",
         boxShadow: "none",
@@ -17,9 +19,18 @@ export const SearchBar = () => {
         className="search-bar"
         value={""}
         onChange={() => {}}
-        sx={{ border: "none", background: "transparent", outline: "none" }}
+        sx={{
+          border: "none",
+          background: "transparent",
+          outlineWidth: "none",
+        }}
       />
-      <IconButton>
+      <IconButton
+        sx={{
+          p: "10px",
+          color: "red",
+        }}
+      >
         <Search></Search>
       </IconButton>
     </Paper>
