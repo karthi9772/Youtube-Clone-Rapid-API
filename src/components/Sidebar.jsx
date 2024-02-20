@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Stack } from "@mui/material";
+
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import HomeIcon from "@mui/icons-material/Home";
 import CodeIcon from "@mui/icons-material/Code";
@@ -12,18 +15,7 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
-export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
-
-export const demoThumbnailUrl = "https://i.ibb.co/G2L2Gwp/API-Course.png";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
-export const demoVideoUrl = "/video/GDa8kZLNhJ4";
-export const demoChannelTitle = "JavaScript Mastery";
-export const demoVideoTitle =
-  "Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI";
-export const demoProfilePicture =
-  "http://dergipark.org.tr/assets/app/images/buddy_sample.png";
-
-export const categories = [
+const categories = [
   { name: "New", icon: <HomeIcon /> },
   { name: "JS Mastery", icon: <CodeIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
@@ -42,3 +34,38 @@ export const categories = [
   { name: "Gym", icon: <FitnessCenterIcon /> },
   { name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
+
+export const Sidebar = () => {
+  const [SelectedCategory, SetSelectedCategory] = useState("");
+  return (
+    <Stack
+      direction="row"
+      sx={{
+        overflowY: "auto",
+        height: { sx: "auto", md: "95%" },
+        flexDirection: { md: "column" },
+      }}
+    >
+      {categories.map((category) => (
+        <button
+          key={category.name}
+          className="category-btn"
+          style={{ background: category.name == SelectedCategory ? "red" : "" }}
+          onClick={() => {
+            SetSelectedCategory(category.name);
+          }}
+        >
+          <span
+            style={{
+              marginRight: "10px",
+              color: category.name == SelectedCategory ? "white" : "red",
+            }}
+          >
+            {category.icon}
+          </span>
+          <span>{category.name}</span>
+        </button>
+      ))}
+    </Stack>
+  );
+};

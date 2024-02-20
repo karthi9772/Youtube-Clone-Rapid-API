@@ -18,7 +18,9 @@ export const SearchBar = () => {
         placeholder="Search..."
         className="search-bar"
         value={""}
-        onChange={() => {}}
+        onChange={(e) => {
+          e.target.value;
+        }}
         sx={{
           border: "none",
           background: "transparent",
