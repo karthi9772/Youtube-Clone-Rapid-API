@@ -25,7 +25,7 @@ function Feed() {
           SetSelectedCategory={SetSelectedCategory}
         />
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
           sx={{
             fontSize: "24px",

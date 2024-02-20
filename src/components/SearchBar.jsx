@@ -21,7 +21,7 @@ export const SearchBar = () => {
         onChange={(e) => {
           e.target.value;
         }}
-        sx={{
+        style={{
           border: "none",
           background: "transparent",
           outlineWidth: "none",
