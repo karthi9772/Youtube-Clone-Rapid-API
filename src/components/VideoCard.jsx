@@ -20,16 +20,23 @@ const VideoCard = ({
   console.log(videoId, snippet);
   return (
     <Card>
-      <Link to="">
+      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
-          sx={{
-            width: 358,
-            height: 180,
-          }}
-        />
+          sx={{ width: 380, height: 180 }}
+        ></CardMedia>
       </Link>
+      <CardContent sx={{ height: "160px", background: "#1e1e1e" }}>
+        <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
+          <Typography
+            sx={{ color: "#fff", fontWeight: "bold" }}
+            variant="subtitle1"
+          >
+            {snippet?.title.slice(0, 60)}
+          </Typography>
+        </Link>
+      </CardContent>
     </Card>
   );
 };

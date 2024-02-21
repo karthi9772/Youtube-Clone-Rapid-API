@@ -14,9 +14,10 @@ import GraphicEqIcon from "@mui/icons-material/GraphicEq";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
+import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 
 const categories = [
-  { name: "New", icon: <HomeIcon /> },
+  { name: "Technology", icon: <NetworkCheckIcon /> },
   { name: "A2D Channel", icon: <CodeIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
