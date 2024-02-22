@@ -10,17 +10,21 @@ import {
   demoVideoUrl,
 } from "../utils/constants";
 
-const VideoCard = (props) => {
-  const {
-    video: {
-      id: { videoId },
-      snippet,
-    },
-  } = props;
-
+const VideoCard = ({
+  video: {
+    id: { videoId },
+    snippet,
+  },
+}) => {
   console.log(videoId, snippet);
   return (
-    <Card>
+    <Card
+      sx={{
+        width: { xs: "100%", sm: "358px", md: "320px" },
+        boxShadow: "none",
+        borderRadius: 0,
+      }}
+    >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
