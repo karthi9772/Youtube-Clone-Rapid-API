@@ -43,3 +43,9 @@ function Feed() {
 }
 
 export default Feed;
+
+// useEffect(() => {
+//   FetchFromAPI(`search?part=snippet&q=${SelectedCategory}`).then((data) =>
+//     SetVideos(data.items)
+//   );
+// }, [SelectedCategory]);

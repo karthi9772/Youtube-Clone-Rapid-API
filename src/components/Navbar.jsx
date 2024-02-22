@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { Typography, Stack } from "@mui/material";
 // import { logo } from "../utils/constants";
 import { SearchBar } from "./SearchBar";
 const Navbar = () => {
@@ -15,10 +15,39 @@ const Navbar = () => {
         justifyContent: "space-between",
       }}
     >
-      <Link to={"/"} sx={{}}>
-        <figure>
-          <img src="/play.png" alt="logo" height={45}></img>
-        </figure>
+      <Link to={"/"} style={{ display: "flex" }}>
+        <img
+          style={{ marginLeft: "9px" }}
+          src="/play.png"
+          alt="logo"
+          height={45}
+        ></img>
+        <Typography
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            ml: "15px",
+            fontSize: "20px",
+            fontWeight: "bold",
+            color: "red",
+          }}
+        >
+          YOU
+        </Typography>
+        <Typography
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "20px",
+            fontWeight: "bold",
+            color: "white",
+            ml: "2px",
+          }}
+        >
+          TUBE
+        </Typography>
       </Link>
       <SearchBar />
     </Stack>
