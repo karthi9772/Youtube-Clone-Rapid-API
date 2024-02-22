@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
+import PropTypes from "prop-types";
+
 import {
   demoChannelTitle,
   demoChannelUrl,
@@ -11,12 +13,14 @@ import {
   demoVideoUrl,
 } from "../utils/constants";
 
-const VideoCard = ({
-  video: {
-    id: { videoId },
-    snippet,
-  },
-}) => {
+const VideoCard = (props) => {
+  const {
+    video: {
+      id: { videoId },
+      snippet,
+    },
+  } = props;
+
   console.log(videoId, snippet);
   return (
     <Card>
