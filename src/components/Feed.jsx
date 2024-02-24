@@ -4,7 +4,7 @@ import { Sidebar } from "./Sidebar";
 import { Stack, Box, Typography } from "@mui/material";
 import { FetchFromAPI } from "../utils/fetchFromAPI";
 function Feed() {
-  const [SelectedCategory, SetSelectedCategory] = useState("New");
+  const [SelectedCategory, SetSelectedCategory] = useState("");
   const [videos, SetVideos] = useState([]);
   useEffect(() => {
     FetchFromAPI(`search?part=snippet&q=${SelectedCategory}`).then((data) =>
