@@ -4,13 +4,17 @@ import { Channelcard } from "./Channelcard";
 import { useState } from "react";
 import Skeleton from "@mui/material/Skeleton";
 
-export const VideoComponent = ({ Videos }) => {
+export const VideoComponent = ({ Videos, direction }) => {
   const [isLoading, SetIsLoading] = useState(true);
   // console.log(Videos);
+  // if (isLoading){
+  //   return(
 
+  //   );
+  // }
   return (
     <Stack
-      direction="row"
+      direction={direction || "row"}
       flexWrap="wrap"
       justifyContent="space-evenly"
       gap={2}
