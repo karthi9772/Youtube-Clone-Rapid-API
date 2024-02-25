@@ -18,7 +18,7 @@ const Navbar = () => {
       <Link to={"/"} style={{ display: "flex" }}>
         <img
           style={{ marginLeft: "9px" }}
-          src="/play.png"
+          src={"./Asset/play.png" || "/play.png"}
           alt="logo"
           height={45}
         ></img>

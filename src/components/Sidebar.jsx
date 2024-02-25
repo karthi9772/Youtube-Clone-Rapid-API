@@ -2,7 +2,7 @@
 import { Stack } from "@mui/material";
 
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import HomeIcon from "@mui/icons-material/Home";
+// import HomeIcon from "@mui/icons-material/Home";
 import CodeIcon from "@mui/icons-material/Code";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
@@ -18,7 +18,6 @@ import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 
 const categories = [
   { name: "Technology", icon: <NetworkCheckIcon /> },
-  { name: "A2D Channel", icon: <CodeIcon /> },
   { name: "Coding", icon: <CodeIcon /> },
   { name: "ReactJS", icon: <CodeIcon /> },
   { name: "NextJS", icon: <CodeIcon /> },
