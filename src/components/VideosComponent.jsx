@@ -1,11 +1,11 @@
 import { Box, Stack } from "@mui/material";
 import VideoCard from "./VideoCard";
 import { Channelcard } from "./Channelcard";
-import { useState } from "react";
-import Skeleton from "@mui/material/Skeleton";
+// import { useState } from "react";
+// import Skeleton from "@mui/material/Skeleton";
 
 export const VideoComponent = ({ Videos, direction }) => {
-  const [isLoading, SetIsLoading] = useState(true);
+  // const [isLoading, SetIsLoading] = useState(true);
   // console.log(Videos);
   // if (isLoading){
   //   return(
