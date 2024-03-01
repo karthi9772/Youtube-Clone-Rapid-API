@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Typography, Stack } from "@mui/material";
 // import { logo } from "../utils/constants";
 import { SearchBar } from "./SearchBar";
+import Play from "./Asset/play.png";
+// import { Image } from "@mui/icons-material";
 const Navbar = () => {
   return (
     <Stack
@@ -15,13 +17,14 @@ const Navbar = () => {
         justifyContent: "space-between",
       }}
     >
-      <Link to={"/"} style={{ display: "flex" }}>
-        <img
+      <Link to={"/Youtube-Clone-Rapid-API"} style={{ display: "flex" }}>
+        {/* <img
           style={{ marginLeft: "9px" }}
-          src={"./Asset/play.png" || "/play.png"}
+          src="./Asset/play.png"
           alt="logo"
           height={45}
-        ></img>
+        ></img> */}
+        <img style={{ marginLeft: "9px" }} src={Play} alt="LOGO" height={45} />
         <Typography
           sx={{
             display: "flex",
