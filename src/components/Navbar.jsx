@@ -36,7 +36,7 @@ const Navbar = () => {
             color: "red",
           }}
         >
-          YOU
+          STREAM
         </Typography>
         <Typography
           sx={{
@@ -49,7 +49,7 @@ const Navbar = () => {
             ml: "2px",
           }}
         >
-          TUBE
+          PLAY
         </Typography>
       </Link>
       <SearchBar />
